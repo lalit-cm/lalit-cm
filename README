@@ -1,0 +1,42 @@
+Update your local package index:
+    sudo apt update
+Install the apache2 package:
+    sudo apt install apache2
+
+Enable apache in the firewall (optional):
+    sudo ufw app list
+    sudo ufw allow 'Apache'
+
+    Verify the change:
+    sudo ufw status
+
+Create the directory for your_domain:
+    sudo mkdir /var/www/your_domain
+
+Assign ownership of the directory:
+    sudo chown -R $USER:$USER /var/www/civilmaps
+    sudo chmod -R 755 /var/www/civilmaps
+
+Copy the civilmaps website to the following location
+    cp index* /var/www/civilmaps/
+    sudo chmod -R 755 /var/www/civilmaps
+
+Dopy the conf file to the sites-available section:
+    cp civilmaps.conf /etc/apache2/sites-available/civilmaps.conf
+
+Enable the file with a2ensite:
+    sudo a2ensite your_domain.conf
+
+Disable the default site defined in 000-default.conf:
+    sudo a2dissite 000-default.conf
+
+Test for configuration errors:
+    sudo apache2ctl configtest
+
+    You should see the following output:
+    Output
+    Syntax OK
+
+Restart Apache to implement your changes:
+    sudo systemctl restart apache2
+
