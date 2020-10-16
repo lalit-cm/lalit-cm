@@ -1,0 +1,4 @@
+span.et-fb-form__label span:not(:first-of-type) {
+    opacity: 1 !important;
+    margin-left: 7px !important;
+}

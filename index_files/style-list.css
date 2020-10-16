@@ -1,0 +1,68 @@
+.tpitem-list{
+  color: #101010;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 20px 0;
+}
+.ctlist .tpitem-list.item-grid:first-child{margin-top: 5px}
+.ctlist .tpitem-list.item-grid:last-child{margin-bottom: 5px}
+/* Start stype list 1 */
+.tpstyle-list-1{
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+  border-top: 50px solid #eee;
+}
+.tpstyle-list-1 .tplist-1-info{
+  padding: 40px 20px;
+  margin-top: -65px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.tpstyle-list-1 .tplist-1-image{
+  width: 142px;
+  height: 142px;
+  overflow: hidden;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 35px;
+}
+.tpstyle-list-1 .tplist-1-image .image-bg-circle{
+  width: 142px;
+  height: 142px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  border: solid 6px #eee;
+}
+.tpstyle-list-1 figcaption{
+  width: calc(100% - 145px);
+  padding: 0 10px;
+  display: inline-block;
+  margin-top: -10px;
+}
+.tpstyle-list-1 h5{margin-top: 35px}
+.tpstyle-list-1 .ex-social-account li a{
+  background: none;
+  color: #888;
+  line-height: 34px;
+  border:1px solid #eee;
+}
+/* End stype list 1 */
+
+
+.tpstyle-list-1 .ex-social-account li a:hover{color:#fff;background: #00bcd4;}
+
+@media screen and (max-width: 450px){
+  .tpstyle-list-1 figcaption{
+    width: 100%;
+  }
+  .tpstyle-list-1 .tplist-1-image{
+    width: 100%;
+  }
+  .tpstyle-list-1 h5{margin-top: 0}
+  .ex-tplist .tpstyle-list-1 figcaption h3{margin-top: 10px}
+}
